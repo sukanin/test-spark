@@ -1,4 +1,4 @@
-from gcr.io/datamechanics/spark:2.4-latest
+from gcr.io/datamechanics/spark:2.4.7-hadoop-3.1.0-java-8-scala-2.11-python-3.7-dm15
 USER root
 ENV PYSPARK_MAJOR_PYTHON_VERSION=3
 WORKDIR /opt/application/
