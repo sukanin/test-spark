@@ -17,4 +17,19 @@ COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-core_2.12/3.2.0/spark-core_2.12-3.2.0.jar
+RUN mv spark-core_2.12-3.2.0.jar /opt/spark/jars
+
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.2.0/spark-sql_2.12-3.2.0.jar
+RUN mv spark-sql_2.12-3.2.0.jar /opt/spark/jars
+
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming_2.12/3.2.0/spark-streaming_2.12-3.2.0.jar
+RUN mv spark-streaming_2.12-3.2.0.jar /opt/spark/jars
+
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-mllib_2.12/3.2.0/spark-mllib_2.12-3.2.0.jar
+RUN mv spark-mllib_2.12-3.2.0.jar /opt/spark/jars
+
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10_2.12/3.2.0/spark-streaming-kafka-0-10_2.12-3.2.0.jar
+RUN mv spark-streaming-kafka-0-10_2.12-3.2.0.jar /opt/spark/jars
+
 COPY main.py .
