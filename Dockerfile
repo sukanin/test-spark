@@ -3,7 +3,7 @@ USER root
 ENV PYSPARK_MAJOR_PYTHON_VERSION=3
 WORKDIR /opt/application/
 
-RUN apt-get update && apt-get upgrade -y && apt-get install gcc -y
+RUN apt-get update && apt-get install gcc g++ -y
 
 RUN wget  https://jdbc.postgresql.org/download/postgresql-42.2.5.jar
 RUN mv postgresql-42.2.5.jar /opt/spark/jars
