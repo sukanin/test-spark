@@ -30,4 +30,7 @@ RUN mv spark-streaming-kafka-0-10_2.12-3.2.0.jar /opt/spark/jars
 RUN wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.0/kafka-clients-2.8.0.jar
 RUN mv kafka-clients-2.8.0.jar /opt/spark/jars
 
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-10-assembly_2.12/3.2.0/spark-streaming-kafka-0-10-assembly_2.12-3.2.0.jar
+RUN mv spark-streaming-kafka-0-10-assembly_2.12-3.2.0.jar /opt/spark/jars
+
 COPY main.py .
