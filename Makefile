@@ -9,7 +9,7 @@ build-nc: ## Build the container without caching
 	docker build --no-cache -t $(IMAGE_NAME) .
 
 run: ## Build the container without caching
-	docker run --mount type=bind,source=$(CURDIR),target=/opt/application $(IMAGE_NAME) -iz localhost:2181 -it input -oz localhost:2181 -ot output
+	docker run --mount type=bind,source=$(CURDIR),target=/opt/application $(IMAGE_NAME) driver local:///opt/application/main.py -iz localhost:2181 -it input -oz localhost:2181 -ot output
 
 shell: ## Build the container without caching
 	docker run -it $(IMAGE_NAME) /opt/spark/bin/pyspark --packages com.amazonaws:aws-java-sdk-bundle:1.11.375,org.apache.hadoop:hadoop-aws:3.2.0
