@@ -1,4 +1,4 @@
-from gcr.io/datamechanics/spark:platform-3.1-dm14
+from gcr.io/datamechanics/spark:2.4-latest
 USER root
 ENV PYSPARK_MAJOR_PYTHON_VERSION=3
 WORKDIR /opt/application/
