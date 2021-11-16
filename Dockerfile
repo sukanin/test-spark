@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install gcc g++ -y
 RUN wget  https://jdbc.postgresql.org/download/postgresql-42.2.5.jar
 RUN mv postgresql-42.2.5.jar /opt/spark/jars
 
-RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.4.7/spark-streaming-kafka-0-8_2.11-2.4.7.jar
-RUN mv spark-streaming-kafka-0-8_2.11-2.4.7.jar /opt/spark/jars
+RUN wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8-assembly_2.11/2.2.0/spark-streaming-kafka-0-8-assembly_2.11-2.2.0.jar
+RUN mv spark-streaming-kafka-0-8-assembly_2.11-2.2.0.jar /opt/spark/jars
 
 COPY requirements.txt .
 RUN pip3 install --upgrade pip
